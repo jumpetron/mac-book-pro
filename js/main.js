@@ -16,6 +16,7 @@ function productCost(product, price, isIncreasing){
     calculateTotal()
 }
 
+// Total Price 
 
 function getTotalPrice(product){
     const productPriceText = document.getElementById(product + '-cost').innerText;
@@ -30,10 +31,50 @@ function calculateTotal(){
     const storageCost = getTotalPrice('storage')
     const deliveryCost = getTotalPrice('delivery')
 
-    const toalCost = defaultCost + memoryCost + storageCost + deliveryCost;
+    
+    const totalCost = defaultCost + memoryCost + storageCost + deliveryCost;
+    const afterDiscount = totalCost;
 
-    document.getElementById('total-cost').innerText = toalCost;
+    document.getElementById('total-cost').innerText = totalCost;
+    document.getElementById('after-discount').innerText = afterDiscount;
+
 }
+
+// discount price calculate
+
+function afterDiscount(){
+    const defaultCost = getTotalPrice('default')
+    const memoryCost = getTotalPrice('memory')
+    const storageCost = getTotalPrice('storage')
+    const deliveryCost = getTotalPrice('delivery')
+
+
+    const totalCost = defaultCost + memoryCost + storageCost + deliveryCost;
+    const afterDiscount = totalCost - (totalCost * 20 / 100);
+
+    document.getElementById('total-cost').innerText = totalCost;
+    document.getElementById('after-discount').innerText = afterDiscount;
+}
+
+// promo code validation and discount applied
+
+function validatePromo() {
+    const promoCode = "stevekaku";
+    const promo = promoCode.trim();
+    const promoInput = document.getElementById('promo-input').value;
+
+    if (promoInput == promo) {
+        document.getElementById('message').style.display = 'block';
+        document.getElementById('err').style.display = 'none';
+        afterDiscount()
+        
+    } else {
+        document.getElementById('err').style.display = 'block'
+        document.getElementById('message').innerHTML = "";
+    }
+}
+
+
 
 
 
@@ -41,13 +82,13 @@ function calculateTotal(){
 document.getElementById('default-memory').addEventListener('click', function () {
 
     productCost('memory', false)
-
+    
 })
 
 document.getElementById('memory-upgrade').addEventListener('click', function () {
 
     productCost('memory', 180, true)
-    
+
 })
 
 
@@ -85,5 +126,7 @@ document.getElementById('special-delivery').addEventListener('click', function (
 
     productCost('delivery', 20, true)
 })
+
+
 
 

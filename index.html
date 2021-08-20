@@ -18,7 +18,7 @@
     <main>
         <section>
             <div class="d-flex mx-auto w-75 mt-5">
-                <div class="">
+                <div class="product-image">
                     <img class="img-fluid w-75" src="images/mac.png" alt="mac book pro">
                 </div>
                 <div>
@@ -73,57 +73,28 @@
                                 </tfoot>
                             </tbody>
                         </table>
-                        <div>
+                        <div class="mt-5">
                             <h6>Add Promo Code</h6>
-                            <div class="input-group mb-3 w-75">
-                            
-                                <input type="text" class="form-control">
-                                <input class="input-group-text" type="button" value="Apply">
+                            <div class="input-group">
+                                <input class="px-2" type="text" id="promo-input">
+                                <input class="btn" type="button" value="Apply" onclick="validatePromo()" />
                             </div>
+                            <p id="message">Coupon applied!</p>
+                            <p id="err">Invalid coupon</p>
                         </div>
                     </div>
                 </div>
             </div>
             
         </section>
-    </main>
-    <footer>
-
-    </footer>
-
-
-
-
-
-
-
-
-
-    <!-- <div class="grid-rows-2 gap-x-40">
-                            <div>
-                                <h4>Best Price</h4>
-                                <p>$1299</p>
-                            </div>
-                            <div>
-                                <h4>Extra Memory Cost</h4>
-                                <p>$0</p>
-                            </div>
-                            <div>
-                                <h4>Extra Storage Cost</h4>
-                                <p>$0</p>
-                            </div>
-                            <div>
-                                <h4>Delivery Charge</h4>
-                                <p>$0</p>
-                            </div>
-                            <hr>
-                            <div>
-                                <h4>Total</h4>
-                                <p>$0</p>
-                            </div>
-                        </div> -->
-
+        <section class="text-center mt-5">
+            <h2>Total: $<span id="after-discount">1299</span></h2>
+        </section>
     
+    </main>
+    <footer class="text-center mt-4">
+        
+    </footer>
     <script src="js/main.js"></script>
     <!-- Bootstrap js bundle -->
     <script src="js/bootstrap.bundle.min.js"></script>
