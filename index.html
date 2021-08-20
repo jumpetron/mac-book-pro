@@ -1,12 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title>Apple</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apple</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap stylesheet -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
 </head>
 <body>
-    <h1>Welcome Assignment - 5</h1>
+    <header>
+
+    </header>
+    <main>
+        <section>
+            <div class="d-flex mx-auto w-75 mt-5">
+                <div class="">
+                    <img class="img-fluid w-75" src="images/mac.png" alt="mac book pro">
+                </div>
+                <div>
+                    <h1 class="">Customize your Blue 24-inch iMac with Apple M1 chip</h1>
+                    <p>Apple M1 chip with 8-core CPU with 4 performance cores and 4 efficiency cores, 7-core GPU, and 16-core Neural
+                        Engine</p>
+                    <div>
+                        <div class="mt-4">
+                            <h6>Memory</h6>
+                            <button id="default-memory" class="btn border me-2">8GB unified memory</button>
+                            <button id="memory-upgrade" class="btn border me-2">16GB unified memory</button>
+                        </div>
+                        <div class="mt-4">
+                            <h6>Storage</h6>
+                            <button id="default-storage" class="btn border me-2">256GB SSD storage</button>
+                            <button id="storage-upgrade-512" class="btn border me-2">512GB SSD storage</button>
+                            <button id="storage-upgrade-1tb" class="btn border me-2">1TB SSD storage</button>
+                        </div>
+                        <div class="mt-4">
+                            <h6>Chose your delivery option</h6>
+                            <button id="default-delivery" class="btn border me-2">Friday, Aug 27 Free Prime Delivery</button>
+                            <button id="special-delivery" class="btn border me-2">Saturday, Aug 21 Delivery Charge $20</button>
+                        </div>
+                    </div>
+                
+                    <!-- Price Section -->
+
+                    <div class="mt-5">
+                        <table class="table w-75">
+                            <tbody>
+                                <tr>
+                                    <th>Best Price</th>
+                                    <td>$<span id="default-cost">1299</span></td>
+                                </tr>
+                                <tr>
+                                    <th>Extra Memory Cost</th>
+                                    <td>$<span id="memory-cost">0</span></td>
+                                </tr>
+                                <tr>
+                                    <th>Extra Storage Cost</th>
+                                    <td>$<span id="storage-cost">0</span></td>
+                                </tr>
+                                <tr>
+                                    <th>Delivery Charge</th>
+                                    <td>$<span id="delivery-cost">0</span></td>
+                                </tr>
+                                <tfoot>
+                                    <tr>
+                                        <th>Total Price</th>
+                                        <td>$<span id="total-cost">1299</span></td>
+                                    </tr>
+                                </tfoot>
+                            </tbody>
+                        </table>
+                        <div>
+                            <h6>Add Promo Code</h6>
+                            <div class="input-group mb-3 w-75">
+                            
+                                <input type="text" class="form-control">
+                                <input class="input-group-text" type="button" value="Apply">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+    <!-- <div class="grid-rows-2 gap-x-40">
+                            <div>
+                                <h4>Best Price</h4>
+                                <p>$1299</p>
+                            </div>
+                            <div>
+                                <h4>Extra Memory Cost</h4>
+                                <p>$0</p>
+                            </div>
+                            <div>
+                                <h4>Extra Storage Cost</h4>
+                                <p>$0</p>
+                            </div>
+                            <div>
+                                <h4>Delivery Charge</h4>
+                                <p>$0</p>
+                            </div>
+                            <hr>
+                            <div>
+                                <h4>Total</h4>
+                                <p>$0</p>
+                            </div>
+                        </div> -->
+
+    
+    <script src="js/main.js"></script>
+    <!-- Bootstrap js bundle -->
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
