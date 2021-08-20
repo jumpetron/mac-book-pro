@@ -66,6 +66,7 @@ function validatePromo() {
     if (promoInput == promo) {
         document.getElementById('message').style.display = 'block';
         document.getElementById('err').style.display = 'none';
+        
         afterDiscount()
         
     } else {
@@ -75,14 +76,11 @@ function validatePromo() {
 }
 
 
-
-
-
 // memory price
 document.getElementById('default-memory').addEventListener('click', function () {
 
     productCost('memory', false)
-    
+
 })
 
 document.getElementById('memory-upgrade').addEventListener('click', function () {
