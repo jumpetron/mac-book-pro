@@ -1,9 +1,54 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Global css */
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
+/* Button Css */
+
+#default-memory:hover{
+    background-color: black;
+    color: #fff;
+}
+
+#memory-upgrade:hover{
+    background-color: black;
+    color: #fff;
+}
+
+#default-storage:hover{
+    background-color: black;
+    color: #fff;
+}
+
+#storage-upgrade-512:hover{
+    background-color: black;
+    color: #fff;
+}
+
+#storage-upgrade-1tb:hover{
+    background-color: black;
+    color: #fff;
+}
+
+#default-delivery:hover{
+    background-color: black;
+    color: #fff;
+}
+
+#special-delivery:hover{
+    background-color: black;
+    color: #fff;
+}
+
+
+/* Validation message css */
 
 #message{
     display: none;
