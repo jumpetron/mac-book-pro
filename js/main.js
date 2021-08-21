@@ -60,14 +60,13 @@ function afterDiscount(){
 
 function validatePromo() {
     const promoCode = "stevekaku";
-    const promo = promoCode.trim();
     const promoInput = document.getElementById('promo-input').value;
 
-    if (promoInput == promo) {
+    if (promoInput == promoCode) {
         document.getElementById('message').style.display = 'block';
         document.getElementById('err').style.display = 'none';
         afterDiscount()
-        
+        promoInput.value = '';
     } else {
         document.getElementById('err').style.display = 'block'
         document.getElementById('message').style.display = 'none';
