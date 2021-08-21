@@ -1,11 +1,13 @@
 
 function productCost(product, price, isIncreasing){
+    
     const productPriceText = document.getElementById(product + '-cost');
     let productPrice = parseFloat(productPriceText.innerText);
     
     productPriceText.innerText = price;
 
     if(isIncreasing){
+
         productPriceText.innerText = price;
     }
 
@@ -19,6 +21,7 @@ function productCost(product, price, isIncreasing){
 // Total Price 
 
 function getTotalPrice(product){
+
     const productPriceText = document.getElementById(product + '-cost').innerText;
     const productPrice = parseFloat(productPriceText);
 
@@ -26,6 +29,7 @@ function getTotalPrice(product){
 }
 
 function calculateTotal(){
+
     const defaultCost = getTotalPrice('default')
     const memoryCost = getTotalPrice('memory')
     const storageCost = getTotalPrice('storage')
@@ -43,6 +47,7 @@ function calculateTotal(){
 // discount price calculate
 
 function afterDiscount(){
+
     const defaultCost = getTotalPrice('default')
     const memoryCost = getTotalPrice('memory')
     const storageCost = getTotalPrice('storage')
@@ -66,10 +71,14 @@ function validatePromo() {
         document.getElementById('message').style.display = 'block';
         document.getElementById('err').style.display = 'none';
         afterDiscount()
+
+        //clear input promo
         document.getElementById('promo-input').value = '';
     } else {
         document.getElementById('err').style.display = 'block'
         document.getElementById('message').style.display = 'none';
+
+        //clear input promo
         document.getElementById('promo-input').value = '';
     }
 
