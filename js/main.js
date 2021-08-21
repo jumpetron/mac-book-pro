@@ -62,16 +62,15 @@ function validatePromo() {
     const promoCode = "stevekaku";
     const promo = promoCode.trim();
     const promoInput = document.getElementById('promo-input').value;
-    
+
     if (promoInput == promo) {
         document.getElementById('message').style.display = 'block';
         document.getElementById('err').style.display = 'none';
         afterDiscount()
         
-        
     } else {
         document.getElementById('err').style.display = 'block'
-        document.getElementById('message').innerHTML = "";
+        document.getElementById('message').style.display = 'none';
     }
 
 }
